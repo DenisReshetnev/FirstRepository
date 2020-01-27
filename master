@@ -102,7 +102,7 @@ def save(event):
 
 
 window = Tk()   # Создание приложения окна
-window.title("Шифратор и дешифратор на основе алгоритма «Блокнот»")
+window.title("Шифратор на основе алгоритма «Блокнот»")
 window.iconbitmap(u'main.ico')  # Загрузка иконки из нашей папки со всеми файломи
 window.resizable(width=False, height=False)
 window.configure(bg='white')
@@ -110,43 +110,43 @@ window.configure(bg='white')
 frame1 = Frame(window, width=780, height=410)   # Создание общего поля
 frame1.grid(row=0, column=0)
 
-label1 = Label(frame1, text='Исходный текст:', width=40, font="Verdana11")
+label1 = Label(frame1, text='Исходный текст:', width=40, font="Verdana 12")
 label1.place(x=10, y=10)
 
-txt2cod = Text(frame1, width=36, height=15, bd=2, font="Verdana 11", wrap=WORD)
+txt2cod = Text(frame1, width=36, height=15, bd=2, font="Verdana 12", wrap=WORD)
 txt2cod.config(state=NORMAL)
 txt2cod.place(x=10, y=35)   # Формы текста, размер, цвет, шрифт
 
-label2 = Label(frame1, text='Результат:', width=40, font="Verdana 11")
+label2 = Label(frame1, text='Результат:', width=40, font="Verdana 12")
 label2.place(x=400, y=10)
 
-output = Text(frame1, bg="white", font="Verdana 11", width=36, height=15, bd=2, wrap=WORD)
+output = Text(frame1, bg="white", font="Verdana 12", width=36, height=15, bd=2, wrap=WORD)
 output.config(state=NORMAL)
 output.place(x=400, y=35)
 
-label3 = Label(frame1, text='Файл со словарем:', width=20, font="Verdana 11")
+label3 = Label(frame1, text='Файл со словарем:', width=20, font="Verdana 12")
 label3.place(x=10, y=315)
 
-libEntry = Entry(frame1, width=18, bd=2, font="Verdana 11")
+libEntry = Entry(frame1, width=18, bd=2, font="Verdana 12")
 libEntry.insert(END, 'dictionary.txt')
 libEntry.place(x=10, y=340)
 
-btnCod = Button(frame1, width=14, bg='white', font="Verdana 11")     # Параметры кнопки
+btnCod = Button(frame1, width=14, bg='white', font="Verdana 12")     # Параметры кнопки
 btnCod.place(x=430, y=330)  # Размеры кнопки
 btnCod['text'] = 'Кодировать'   # Надпись  на кнопке
 btnCod.bind('<Button-1>', coding_click) 
 
-btnDec = Button(frame1, width=14, bg='white', font="Verdana 11")
+btnDec = Button(frame1, width=14, bg='white', font="Verdana 12")
 btnDec.place(x=590, y=330)
 btnDec['text'] = 'Декодировать'
 btnDec.bind('<Button-1>', decoding_click)
 
-btnClear = Button(frame1, width=14, bg='white', font="Verdana 11")
+btnClear = Button(frame1, width=14, bg='white', font="Verdana 12")
 btnClear.place(x=220, y=330)
 btnClear['text'] = 'Очистить'
 btnClear.bind('<Button-1>', clear)
 
-btnSave = Button(frame1, width=14, bg='white', font="Verdana 11")
+btnSave = Button(frame1, width=14, bg='white', font="Verdana 12")
 btnSave.place(x=220, y=370)
 btnSave['text'] = 'Сохранить'
 btnSave.bind('<Button-1>', save)
